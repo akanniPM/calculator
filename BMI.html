@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <style>
+        #container{
+            padding-top:20px ;
+            width:40%;
+            margin-left: auto;
+            margin-right: auto;
+            /* background-color: linear-gradient(to right red, blue); */
+            background-color: rgb(181, 222, 222);
+        }
+        input{
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        button{
+            padding: 10px;
+            margin: 5px;
+            border-radius: 15px;
+            background-color: rgb(96, 230, 96);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="number" id="height" placeholder="enter your height in m...."> <br>
+        <input type="number" id="weight" placeholder="enter your weight in kg...."> <br>
+        <button onclick="BMI()">check weight</button>
+        <div id="BMIdisplay">
+
+        </div>
+    </div>
+    <script>
+        function BMI() {
+            let BmiWeight = +document.getElementById('weight').value
+            let BmiHeight = +document.getElementById('height').value
+            let calculate = (BmiWeight/(BmiHeight**2))*703
+            let output = document.getElementById('BMIdisplay')
+            console.log(calculate);
+            if (!calculate || !BmiHeight || !BmiWeight) {
+                alert('All fields are mandatory')
+                
+                
+            } else if (calculate < 18.5) {
+                output.innerHTML = (`<h2>your BMI is ${calculate} kg/m²</h2> <br> You are underweight`)
+
+                
+            }else if (calculate >= 18.5 && calculate < 24.9) {
+                output.innerHTML = (`<h2>your BMI is ${calculate} kg/m²</h2> <br> You are of normal weight`)
+                
+            }else if (calculate < 29.9) {
+                output.innerHTML = (`<h2>your BMI is ${calculate} kg/m²</h2> <br> You are overweight`)
+            }else{
+                output.innerHTML = (`<h2>your BMI is ${calculate} kg/m²</h2> <br> You are Obese`)
+            }
+            console.log(calculate);
+            
+        }
+    </script>
+    
+</body>
+</html>

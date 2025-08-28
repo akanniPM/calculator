@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick=doIt(1)>hello</button>
+    <button onclick=doIt(5)>yooo</button>
+    <script>
+        function doIt(params) {
+            console.log(10 + +`${params}`);
+        }
+        // function declaration
+        function sayAny() {
+            console.log('say anything to the user');
+        }
+        sayAny()
+
+        // anonymous function : is a function that dont have a name, but it dont have a name but you can store it in a var
+        // function (){
+
+        // } instead do this
+        let anon = function () {
+            console.log('I am an anon function assigned to a var');
+
+        }
+        anon()
+
+        // immediately invoked functiion expression IIFE or self involed unctiion expression 
+
+
+
+        function NumArr() {
+            console.log(arguments);
+
+
+        }
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+
+        }
+        NumArr = [1, 3, 545, 3, 42, 23, 3, 56, 767, 54, 34, 2, 22, 1]
+
+    </script>
+</body>
+
+</html>
+<!-- function scope
+block-scope 
+local scope
+global scope
+function declaration
+arrow function =>
+
+functions with parameter(param)
+
+-->

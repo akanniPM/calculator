@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="Input">
+    <button onclick="designer()">Search Product</button>
+    <script>
+        let productArr = ['nike', 'adidas', 'puma', 'gucci', 'prada', 'burberry', 'ashlux', 'hermes', 'chanel', 'dior', 'zara',]
+        let container
+
+
+
+        function designer() {
+            let InputDesign = document.getElementById('Input').value.toLowerCase().trim()
+            if (!InputDesign) {
+                alert('enter a product')
+                return
+            }
+            if (productArr.includes(InputDesign)) {
+                alert(`${InputDesign} is available`)
+                return
+            } else {
+                alert(`${InputDesign} is unavailable`)
+            }
+            // if (productArr.includes(!InputDesign)) {
+            //     alert(`${InputDesign} is unavailable`)
+            // }
+        }
+        function addManyNum() {
+            console.log(arguments);
+            // let copiedArr = Array.from(arguments)
+            let copiedArr = []
+            for (let index = 0; index < arguments.length; index++) {
+                const element = arguments[index];
+                copiedArr.push(element)
+
+            }
+            addManyNum = (1, 4, 56, 4, 34, 2, 125, 6, 75, 4, 32, 50)
+            let sum = 0
+            for (let index = 0; index < arguments.length; index++) {
+                const element = arguments[index];
+                sum = sum + element
+                console.log(sum);
+
+
+            }
+
+            // function returning a value
+            function returnExample() {
+                let name = 'Adejumo'
+                return name
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
